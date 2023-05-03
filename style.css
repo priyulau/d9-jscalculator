@@ -1,0 +1,32 @@
+body{   
+}
+
+.gridcontainer{
+    display:grid;
+    grid-template-columns: 150px 150px 150px 100px;
+    background-color: white;
+    border:3px solid black;
+    padding: 10px;
+    width: 550px;
+    margin:auto;
+}
+
+.griditem{
+    background-color: green;
+    text-align: center;
+    padding: 20px 10px 20px 10px;
+    color:white;
+    border: 4px solid white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.window{
+    background-color:white;
+    grid-column-start:1;
+    grid-column-end:4;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin:5px;
+}
