@@ -2,29 +2,54 @@
 <html>
     <head>
         <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            function display(value) {
+                document.getElementById("result").value += value;
+            }
+            function clearscreen() {
+                document.getElementById("result").value = "";
+            }
+            function solve() {
+                var a = document.getElementById("result").value;
+                var b = eval(a);
+                document.getElementById("result").value = b;
+            }
+        </script>
     </head>
-    <header>
-    </header>
+
     <body class="text-center item-center">
         <div class="grid grid-rows-5 grid-cols-4 gap-3 border border-2 border-black p-5 w-[600px] mx-auto">
-            <div class="border border-black border-2 bg-white rounded py-5 col-span-3"></div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">C</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">1</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">2</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">3</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">/</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">4</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">5</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">6</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">*</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">7</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">8</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">9</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">-</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">0</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">.</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">=</div>
-            <div class="border bg-green-500 rounded py-5 font-bold text-white text-xl">+</div>
+
+            <!--This is the white display box-->
+            <input type="text" id="result" class="border border-black border-2 bg-white rounded py-5 col-span-3"></input>
+
+            <!--This button clears the screen-->
+            <input type="button" value="C" onclick="clearscreen()" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+
+            <!--These are the numerical buttons-->
+            <input type="button" value ="1" onclick="display('1')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+            <input type="button" value ="2" onclick="display('2')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+            <input type="button" value ="3" onclick="display('3')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+            
+            <input type="button" value ="/" onclick="display('/')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+
+            <input type="button" value ="4" onclick="display('4')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+            <input type="button" value ="5" onclick="display('5')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+            <input type="button" value ="6" onclick="display('6')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+
+            <input type="button" value ="*" onclick="display('*')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+
+            <input type="button" value ="7" onclick="display('7')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+            <input type="button" value ="8" onclick="display('8')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+            <input type="button" value ="9" onclick="display('9')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+
+            <input type="button" value ="-" onclick="display('-')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+
+            <input type="button" value ="0" onclick="display('0')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+            <input type="button" value ="." onclick="display('.')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+            <input type="button" value ="=" onclick="solve()" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
+
+            <input type="button" value ="+" onclick="display('+')" class="border bg-green-500 rounded py-5 font-bold text-white text-xl"></input>
         </div>
     </body>
 </html>
